@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Sidebar colors */
+  --sidebar-background: 220 13% 18%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 207 90% 54%;
+  --sidebar-primary-foreground: 211 100% 99%;
+  --sidebar-accent: 220 13% 28%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 220 13% 28%;
+  --sidebar-ring: 224 71.4% 4.1%;
+  
+  /* Chart colors */
+  --chart-1: 207 90% 54%;
+  --chart-2: 150 60% 54%;
+  --chart-3: 45 90% 54%;
+  --chart-4: 0 84% 60%;
+  --chart-5: 270 70% 54%;
+  
+  /* Success, warning, and danger colors */
+  --success-50: 142 72% 95%;
+  --success-100: 141 84% 93%;
+  --success-500: 142 71% 45%;
+  --success-600: 142 77% 38%;
+  --success-700: 142 72% 29%;
+  
+  --warning-50: 45 100% 96%;
+  --warning-100: 43 100% 85%;
+  --warning-500: 38 92% 50%;
+  --warning-600: 31 92% 45%;
+  --warning-700: 26 90% 37%;
+  
+  --danger-50: 0 86% 97%;
+  --danger-100: 0 93% 94%;
+  --danger-500: 0 84% 60%;
+  --danger-600: 0 72% 51%;
+  --danger-700: 0 74% 42%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  /* Sidebar dark mode colors */
+  --sidebar-background: 240 10% 5%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 207 90% 45%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 10% 14%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 240 10% 14%;
+  --sidebar-ring: 240 4.9% 83.9%;
+  
+  /* Chart dark mode colors */
+  --chart-1: 207 90% 45%;
+  --chart-2: 150 60% 45%;
+  --chart-3: 45 90% 45%;
+  --chart-4: 0 84% 45%;
+  --chart-5: 270 70% 45%;
+  
+  /* Success, warning, and danger dark mode colors */
+  --success-50: 142 46% 25%;
+  --success-100: 142 45% 20%;
+  --success-500: 142 71% 36%;
+  --success-600: 142 64% 31%;
+  --success-700: 142 69% 26%;
+  
+  --warning-50: 45 70% 25%;
+  --warning-100: 43 65% 20%;
+  --warning-500: 38 92% 40%;
+  --warning-600: 31 92% 35%;
+  --warning-700: 26 90% 30%;
+  
+  --danger-50: 0 66% 25%;
+  --danger-100: 0 63% 20%;
+  --danger-500: 0 84% 46%;
+  --danger-600: 0 72% 41%;
+  --danger-700: 0 74% 36%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  /* Custom scrollbar for better aesthetics */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-sm;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+}
