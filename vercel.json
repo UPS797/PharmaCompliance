@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "_comment": "Pharmacy compliance platform deployment",
   "builds": [
     {
       "src": "server/index.ts",
